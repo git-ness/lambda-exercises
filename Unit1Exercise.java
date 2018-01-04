@@ -27,7 +27,9 @@ public class Unit1Exercise {
 
 //        people.sort((person1, person2) -> person1.getLastname().compareTo(person2.getLastname()));
 
-        people.sort(comparing((person) -> person.getLastname()));
+//        people.sort(comparing((person) -> person.getLastname()));
+
+        people.sort(comparing(Person::getLastname));
 
         for (Person peeps : people) {
             System.out.println(peeps.getLastname());
