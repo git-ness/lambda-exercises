@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.util.Comparator.comparing;
+
 public class Unit1Exercise {
 
     public static void main(String[] args) {
@@ -23,7 +25,9 @@ public class Unit1Exercise {
 
         );
 
-        people.sort((person1, person2) -> person1.getLastname().compareTo(person2.getLastname()));
+//        people.sort((person1, person2) -> person1.getLastname().compareTo(person2.getLastname()));
+
+        people.sort(comparing((person) -> person.getLastname()));
 
         for (Person peeps : people) {
             System.out.println(peeps.getLastname());
