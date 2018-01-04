@@ -25,12 +25,12 @@ public class Unit1Exercise {
 
         );
 
-        // Exercise 2:
+        // Exercise 3:
 
-        people.forEach((Person person) -> System.out.println(person.getLastname()));
-        people.forEach((person) -> System.out.println(person.getLastname()));
-        people.forEach((Person::printLastName) );
-        
+        people.forEach( (Person person) -> { if (person.getLastname().charAt(0) == 'C' ) {System.out.println( person.getLastname());}}) ;
+        people.forEach((Person::getAllLastNameThatBeginWithCs));
 
     }
+
+
 }
