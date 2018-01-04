@@ -23,7 +23,7 @@ public class Unit1Exercise {
 
         );
 
-        people.sort((Person person1, Person person2) -> person1.getLastname().compareTo(person2.getLastname()));
+        people.sort((person1, person2) -> person1.getLastname().compareTo(person2.getLastname()));
 
         for (Person peeps : people) {
             System.out.println(peeps.getLastname());
